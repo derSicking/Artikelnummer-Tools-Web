@@ -1,0 +1,112 @@
+:root{
+	--primary: #001e78;
+	--grey: #e6e6e6;
+	--greyed-out: #a8a8a8;
+	--valid: #00b4dc;
+	--invalid: #c80000;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.inactive {
+	opacity: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input.input::-webkit-outer-spin-button,
+input.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input.input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.button {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-style: none;
+	border-radius: 100%;
+	background-color: var(--grey);
+	font-size: larger;
+	box-shadow: 2px 2px 4px #ccc;
+}
+
+.plus{
+	margin-top: 15px;
+}
+
+.minus{
+	width: 30px;
+	height: 30px;
+	margin-right: 12px;
+}
+
+.input{
+	background-color: var(--grey);
+	border-radius: 3px;
+	padding: 0px 10px;
+	height: 2em;
+	border-style: hidden;
+	outline: none;
+	box-shadow: inset 3px 3px 7px #aaa;
+	width: 8em;
+}
+
+#allForms {
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form {
+	display: flex;
+}
+
+.form-container {
+	display: flex;
+	align-items: center	;
+	justify-content: center;
+}
+
+.barcode-container {
+	min-width: 234px;
+	flex-grow: 1;
+	display: flex;
+}
+
+.barcode{
+	margin-left: auto;
+	height: 92px;
+	max-width: 234px;
+	transform-origin: right center;
+}
+
+.invalid input.input[type=number] {
+	box-shadow: inset 0px 0px 5px var(--invalid), inset 3px 3px 7px #aaa;
+}
+
+@media print{
+	.button{
+		display: none;
+	}
+
+	.input {
+		box-shadow: none;
+	}
+
+	.barcode {
+		transform: scale(.7);
+	}
+
+	.form-container {
+		height: 70px;
+	}
+}
