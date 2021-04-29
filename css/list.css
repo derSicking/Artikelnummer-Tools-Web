@@ -1,3 +1,7 @@
+h1 {
+	color: blue;
+}
+
 :root{
 	--primary: #001e78;
 	--grey: #e6e6e6;
@@ -6,7 +10,21 @@
 	--invalid: #c80000;
 }
 
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
 body {
+	font-family: "Univers", sans-serif;
+
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -93,6 +111,27 @@ input.input[type=number] {
 	box-shadow: inset 0px 0px 5px var(--invalid), inset 3px 3px 7px #aaa;
 }
 
+.footer{
+	display: flex;
+	flex-direction: row;
+}
+
+.content {
+	flex-grow: 1;
+}
+
+.footer p {
+	flex-shrink: 1;
+	margin: 5px 10px;
+	font-size: small;
+	color: #606060;
+}
+
+.footer a {
+	color: #606060;
+	text-decoration: none;
+}
+
 @media print{
 	.button{
 		display: none;
@@ -108,5 +147,9 @@ input.input[type=number] {
 
 	.form-container {
 		height: 70px;
+	}
+
+	.footer {
+		display: none;
 	}
 }
