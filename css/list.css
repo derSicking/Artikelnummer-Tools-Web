@@ -92,10 +92,11 @@ input.input[type=number] {
 	display: flex;
 	align-items: center	;
 	justify-content: center;
+	break-after: always;
 }
 
 .barcode-container {
-	min-width: 234px;
+	min-width: 240px;
 	flex-grow: 1;
 	display: flex;
 }
@@ -139,17 +140,20 @@ input.input[type=number] {
 
 	.input {
 		box-shadow: none;
+		background-color: transparent;
+		background: unset;
 	}
 
-	.barcode {
-		transform: scale(.7);
-	}
-
-	.form-container {
-		height: 70px;
+	.barcode-container {
+		transform: scale(.6, .6);
+		height: 60px;
 	}
 
 	.footer {
+		display: none;
+	}
+
+	.invalid, .empty{
 		display: none;
 	}
 }
