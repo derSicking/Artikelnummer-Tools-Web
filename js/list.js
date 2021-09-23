@@ -78,25 +78,26 @@ $(document).ready(function () {
 		event.preventDefault();
 
 		input = $(event.target).val();
+		console.log(input)
 
 		if (input.length == 0) {
-			$(event.target.parentElement).addClass("empty");
+			$(event.target).closest(".form-container").addClass("empty");
 		} else {
-			$(event.target.parentElement).removeClass("empty");
+			$(event.target).closest(".form-container").removeClass("empty");
 		}
 
 		ean = getComplete(input);
 
 		if (ean == undefined) {
-			$(event.target.parentElement).find(".barcode").addClass("inactive");
+			$(event.target).closest(".form-container").find(".barcode").addClass("inactive");
 			if (input.length > 0) {
-				$(event.target.parentElement).addClass("invalid");
+				$(event.target).closest(".form-container").addClass("invalid");
 			}
 			return;
 		}
 
-		$(event.target.parentElement).removeClass("invalid");
-		$(event.target.parentElement).find(".barcode").removeClass("inactive").JsBarcode(ean, { height: 50, format: ean.length == 8 ? "EAN8" : "EAN13" });
+		$(event.target).closest(".form-container").removeClass("invalid");
+		$(event.target).closest(".form-container").find(".barcode").removeClass("inactive").JsBarcode(ean, { height: 50, format: ean.length == 8 ? "EAN8" : "EAN13" });
 
 	});
 

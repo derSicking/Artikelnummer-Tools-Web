@@ -11,13 +11,19 @@
 <body>
 
 	<div class="content">
-		<div id="allForms">
-			<form class="form-container empty" onSubmit="nextLine(); return false;">
-				<input type="button" class="minus button" value="-" tabindex="-1" />
-				<input type="number" class="numberInput input" />
-				<div class="barcode-container"><svg class="barcode inactive"></svg></div><br />
-			</form>
-		</div>
+		<table id="allForms">
+			<tbody>
+				<tr class="form-container empty">
+					<td>
+						<form onSubmit="nextLine(); return false;">
+							<input type="button" class="minus button" value="-" tabindex="-1" />
+							<input type="number" class="numberInput input" />
+							<div class="barcode-container"><svg class="barcode inactive"></svg></div><br />
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 		<input type="button" class="plus button" value="+" tabindex="-1" />
 
 		<script src="js/jquery.js"></script>
@@ -26,8 +32,8 @@
 	</div>
 
 	<div class="footer">
-		<p>jQuery v3.6.0 | © OpenJS Foundation and other contributors | <a
-				href="https://jquery.org/license">jquery.org/license</a></p>
+		<p>jQuery v3.6.0 | © OpenJS Foundation and other contributors | <a href="https://jquery.org/license"
+				tabindex="-1">jquery.org/license</a></p>
 		<p>JsBarcode v3.11.4 | © Johan Lindell | MIT license</p>
 	</div>
 

@@ -84,12 +84,9 @@ input.input[type=number] {
 	flex-direction: column;
 }
 
-.form {
+form {
 	display: flex;
-}
-
-.form-container {
-	display: flex;
+	flex-direction: row;
 	align-items: center	;
 	justify-content: center;
 	break-after: always;
