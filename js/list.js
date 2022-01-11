@@ -67,6 +67,7 @@ $(document).ready(function() {
 
 	createClone = function() {
 		clone = $(".form-container").first().clone(true);
+		$(clone).removeClass("invalid");
 		$(clone).find(".input").val("");
 		$(clone).find(".barcode").addClass("inactive");
 		$(clone).find(".anc").text("");
@@ -82,7 +83,7 @@ $(document).ready(function() {
 
 		if(ean == undefined){
 			$(event.target.parentElement).find(".barcode").addClass("inactive");
-			$(event.target.parentElement).find(".anc").addClass("inactive");
+			$(event.target.parentElement).find(".anc").text("");
 			if(input.length > 0){
 				$(event.target.parentElement).addClass("invalid");
 			}
@@ -91,7 +92,7 @@ $(document).ready(function() {
 
 		$(event.target.parentElement).removeClass("invalid");
 		$(event.target.parentElement).find(".barcode").removeClass("inactive").JsBarcode(ean, {height: 50, format: ean.length == 8 ? "EAN8" : "EAN13"});
-		$(event.target.parentElement).find(".anc").removeClass("inactive").text(ean);
+		$(event.target.parentElement).find(".anc").text(ean);
 
 	});
 
@@ -107,6 +108,7 @@ $(document).ready(function() {
 			$(".form-container").first().find(".numberLabel").text("");
 			$(".form-container").first().find(".anc").text("");
 			$(".form-container").first().find(".input").focus();
+			$(".form-container").first().find(".barcode").addClass("inactive");
 			return;
 		}
 		$(event.target).closest(".form-container").remove();

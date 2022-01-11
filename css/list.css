@@ -57,6 +57,10 @@ input.input[type=number] {
 	background-color: var(--grey);
 	font-size: larger;
 	box-shadow: 2px 2px 4px #ccc;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	line-height: 40px;
 }
 
 .plus{
@@ -66,6 +70,7 @@ input.input[type=number] {
 .minus{
 	width: 30px;
 	height: 30px;
+	line-height: 30px;
 	margin-right: 12px;
 }
 
@@ -101,7 +106,7 @@ input.input[type=number] {
 
 .anc {
 	min-width: 15ch;
-	justify-content: end;
+	justify-content: flex-end;
 	flex-grow: 1;
 	display: flex;
 }
