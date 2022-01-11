@@ -69,6 +69,7 @@ $(document).ready(function() {
 		clone = $(".form-container").first().clone(true);
 		$(clone).find(".input").val("");
 		$(clone).find(".barcode").addClass("inactive");
+		$(clone).find(".anc").text("");
 		clone.appendTo($("#allForms"));
 	}
 
@@ -104,6 +105,7 @@ $(document).ready(function() {
 			// keep it
 			$(".form-container").first().find(".input").val("");
 			$(".form-container").first().find(".numberLabel").text("");
+			$(".form-container").first().find(".anc").text("");
 			$(".form-container").first().find(".input").focus();
 			return;
 		}
