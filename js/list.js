@@ -81,6 +81,7 @@ $(document).ready(function() {
 
 		if(ean == undefined){
 			$(event.target.parentElement).find(".barcode").addClass("inactive");
+			$(event.target.parentElement).find(".anc").addClass("inactive");
 			if(input.length > 0){
 				$(event.target.parentElement).addClass("invalid");
 			}
@@ -89,6 +90,7 @@ $(document).ready(function() {
 
 		$(event.target.parentElement).removeClass("invalid");
 		$(event.target.parentElement).find(".barcode").removeClass("inactive").JsBarcode(ean, {height: 50, format: ean.length == 8 ? "EAN8" : "EAN13"});
+		$(event.target.parentElement).find(".anc").removeClass("inactive").text(ean);
 
 	});
 

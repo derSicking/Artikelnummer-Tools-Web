@@ -22,6 +22,8 @@ body {
 	flex: 1 0 auto;
 	flex-direction: column;
 	align-items: center;
+
+	font-size: large;
 }
 
 .content{
@@ -75,13 +77,16 @@ input.input[type=number] {
 	border-style: hidden;
 	outline: none;
 	box-shadow: inset 3px 3px 7px #aaa;
-	width: 8em;
+	width: 9ch;
+	font-size: inherit;
 }
 
 #allForms {
 	max-width: 700px;
 	display: flex;
 	flex-direction: column;
+	gap: .5em;
+	margin: .5em;
 }
 
 .form {
@@ -94,10 +99,17 @@ input.input[type=number] {
 	justify-content: center;
 }
 
+.anc {
+	min-width: 15ch;
+	justify-content: end;
+	flex-grow: 1;
+	display: flex;
+}
+
 .barcode-container {
 	min-width: 234px;
 	flex-grow: 1;
-	display: flex;
+	display: none;
 }
 
 .barcode{
@@ -112,7 +124,7 @@ input.input[type=number] {
 }
 
 .footer{
-	display: flex;
+	display: none;
 	flex-direction: row;
 }
 
@@ -130,6 +142,26 @@ input.input[type=number] {
 .footer a {
 	color: #606060;
 	text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+	
+	body {
+		font-size: medium;
+	}
+
+	.footer {
+		display: flex;
+	}
+
+	.barcode-container {
+		display: flex;
+	}
+
+	.anc {
+		display: none;
+	}
+	
 }
 
 @media print{
