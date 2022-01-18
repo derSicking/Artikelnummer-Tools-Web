@@ -178,15 +178,19 @@ input.input[type=number] {
 		box-shadow: none;
 	}
 
-	.barcode {
-		transform: scale(.7);
+	.barcode-container {
+		display: flex;
 	}
 
-	.form-container {
-		height: 70px;
+	.anc {
+		display: none;
 	}
 
 	.footer {
+		display: none;
+	}
+
+	.invalid {
 		display: none;
 	}
 }
